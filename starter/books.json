@@ -1,0 +1,373 @@
+[
+  {
+    "name": "C++ Primer",
+    "author": "Bjarne Stroustrup",
+    "status": "available",
+    "issuer": "NA",
+    "duedate":"NA",
+    "issuedate": "NA",
+    "regno": "NA"
+  },
+  {
+    "name": "Data Structures and Algorithms",
+    "author": "Michael Goldwasser",
+    "status": "issued",
+    "issuer": "Jinesh Shah",
+    "duedate":"20-01-2023",
+    "issuedate": "12-12-2022",
+    "regno": "211080037"
+  },
+  {
+    "name": "Introduction to Algorithms",
+    "author": "Thomas Cormen",
+    "status": "available",
+    "issuer": "NA",
+    "duedate":"NA",
+    "issuedate": "NA",
+    "regno": "NA"
+  },
+  {
+    "name": "Digital Logic Design",
+    "author": "A Anand Kumar",
+    "status": "issued",
+    "issuer": "Aryan Karawale",
+    "duedate":"02-01-2023",
+    "issuedate": "20-12-2022",
+    "regno": "211090038"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "author": "Kenneth Rosen",
+    "status": "issued",
+    "issuer": "Priyanshu Rathore",
+    "duedate":"12-01-2023",
+    "issuedate": "29-12-2022",
+    "regno": "211080038"
+  },
+  {
+    "name": "Advanced Engineering Mathematics",
+    "author": "HK Dass",
+    "status": "issued",
+    "issuer": "Karan Choksey",
+    "duedate":"09-01-2023",
+    "issuedate": "01-01-2023",
+    "regno": "211080043"
+  },
+  {
+    "name": "Automata Theory",
+    "author": "JE Hopcroft",
+    "status": "available",
+    "issuer": "NA",
+    "duedate":"NA",
+    "issuedate": "NA",
+    "regno": "NA"
+  },
+  {
+    "name": "Operating System Concepts",
+    "author": "Siberschatz",
+    "status": "issued",
+    "issuer": "Viraj Shah",
+    "duedate":"02-02-2023",
+    "issuedate": "15-12-2022",
+    "regno": "211080023"
+  },
+  {
+    "name": "Fundamentals of DBMS",
+    "author": "Elmasri",
+    "status": "issued",
+    "issuer": "Meet Ranka",
+    "duedate":"25-01-2023",
+    "issuedate": "10-01-2023",
+    "regno": "211080041"
+  },
+
+  {
+    "name": "Principles of GIS",
+    "author": "Otto Huisman",
+    "status": "issued",
+    "issuer": "Siddhant Baheti",
+    "duedate":"15-01-2023",
+    "issuedate": "02-01-2023",
+    "regno": "211080014"
+  },
+  {
+    "name": "Probability and Statistics",
+    "author": "Sheldon Ross",
+    "status": "issued",
+    "issuer": "Mikhil Angre",
+    "duedate":"17-01-2023",
+    "issuedate": "02-01-2023",
+    "regno": "211080031"
+  },
+  {
+    "name": "Web Technologies",
+    "author": "Tanveer Alam",
+    "status": "available",
+    "issuer": "NA",
+    "duedate":"NA",
+    "issuedate": "NA",
+    "regno": "NA"
+  },
+  {
+    "name": "Software Engineering",
+    "author": "Roger Pressman",
+    "status": "available",
+    "issuer": "NA",
+    "duedate":"NA",
+    "issuedate": "NA",
+    "regno": "NA"
+  },
+  {
+    "name": "Optical Fibre Communication",
+    "author": "John Senior",
+    "status": "issued",
+    "issuer": "Arsh Khan",
+    "duedate":"17-01-2023",
+    "issuedate": "15-01-2023",
+    "regno": "211090072"
+  },
+  {
+    "name": "Digital Image Processing",
+    "author": "R Woods",
+    "status": "issued",
+    "issuer": "Aneesh Nayak",
+    "duedate":"05-01-2023",
+    "issuedate": "30-12-2022",
+    "regno": "211090018"
+  },
+  {
+    "name": "RF Microelectronics",
+    "author": "Behzad Razavi",
+    "status": "available",
+    "issuer": "NA",
+    "duedate":"NA",
+    "issuedate": "NA",
+    "regno": "NA"
+  },
+  {
+    "name": "Antennas",
+    "author": "John Cross",
+    "status": "issued",
+    "issuer": "Rushi Jani",
+    "duedate":"20-01-2023",
+    "issuedate": "11-01-2023",
+    "regno": "211090051"
+  },
+  {
+    "name": "Engineering Mechanics",
+    "author": "MD Dayal",
+    "status": "issued",
+    "issuer": "Siddharth Shenoy",
+    "duedate":"05-01-2023",
+    "issuedate": "22-01-2022",
+    "regno": "211090036"
+  },
+  {
+    "name": "Engineering Drawing",
+    "author": "ND Bhatt",
+    "status": "issued",
+    "issuer": "Himanshu Singh",
+    "duedate":"18-01-2023",
+    "issuedate": "09-01-2023",
+    "regno": "211090024"
+  },
+  {
+    "name": "Spatial Databases",
+    "author": "Ian Robinson",
+    "status": "issued",
+    "issuer": "Chinmay Mahajan",
+    "duedate":"21-01-2023",
+    "issuedate": "09-01-2023",
+    "regno": "211080065"
+  },
+  {
+    "name": "Compiler Construction",
+    "author": "Kenneth Louden",
+    "status": "issued",
+    "issuer": "Neel Shah",
+    "duedate":"17-01-2023",
+    "issuedate": "01-12-2022",
+    "regno": "201070004"
+  },
+  {
+    "name": "Computer Networks- A Top Down Approach",
+    "author": "BA Forouzan",
+    "status": "available",
+    "issuer": "NA",
+    "duedate":"NA",
+    "issuedate": "NA",
+    "regno": "NA"
+  },
+  {
+    "name": "Internet And World Wide Web",
+    "author": "Dietel and Nieto",
+    "status": "issued",
+    "issuer": "Smit Sekhadia",
+    "duedate":"20-01-2023",
+    "issuedate": "04-01-2022",
+    "regno": "201080010"
+  },
+  {
+    "name": "Generic Algorithms",
+    "author": "David Goldberg",
+    "status": "issued",
+    "issuer": "Aditya Kulkarni",
+    "duedate":"12-02-2023",
+    "issuedate": "29-12-2022",
+    "regno": "211080038"
+  },
+  {
+    "name": "Parallel Programming in C",
+    "author": "Michael  Quinn",
+    "status": "issued",
+    "issuer": "Diven Sirwani",
+    "duedate":"23-01-2023",
+    "issuedate": "01-01-2023",
+    "regno": "201080034"
+  },
+  {
+    "name": "Spatial Data Analysis ",
+    "author": "Robin Haining",
+    "status": "issued",
+    "issuer": "Kush Kothari",
+    "duedate":"31-01-2023",
+    "issuedate": "10-01-2023",
+    "regno": "191070009"
+  },
+  {
+    "name": "Elementary Number Theory",
+    "author": "James Strayer",
+    "status": "available",
+    "issuer": "NA",
+    "duedate":"NA",
+    "issuedate": "NA",
+    "regno": "NA"
+  },
+  {
+    "name": "Object Oriented Analysis and Design",
+    "author": "Andrew Haigh",
+    "status": "issued",
+    "issuer": "Aaryan Aapte",
+    "duedate":"23-01-2023",
+    "issuedate": "11-01-2023",
+    "regno": "211070018"
+  },
+
+  {
+    "name": "Speech and Language Processing",
+    "author": "Dan Jurafsky",
+    "status": "issued",
+    "issuer": "Siddhant Baheti",
+    "duedate":"15-01-2023",
+    "issuedate": "02-01-2023",
+    "regno": "211080014"
+  },
+  {
+    "name": "Software Architecture",
+    "author": "Richard Taylor",
+    "status": "issued",
+    "issuer": "Mikhil Angre",
+    "duedate":"17-01-2023",
+    "issuedate": "02-01-2023",
+    "regno": "211080031"
+  },
+  {
+    "name": "Intelligent Data Analysis",
+    "author": "David Hand",
+    "status": "available",
+    "issuer": "NA",
+    "duedate":"NA",
+    "issuedate": "NA",
+    "regno": "NA"
+  },
+  {
+    "name": "Big Data Black Book",
+    "author": "Alex Holmes",
+    "status": "available",
+    "issuer": "NA",
+    "duedate":"NA",
+    "issuedate": "NA",
+    "regno": "NA"
+  },
+  {
+    "name": "Cloud Computing Bible",
+    "author": "Barrie Sosinsky",
+    "status": "issued",
+    "issuer": "Saumya Karia",
+    "duedate":"28-01-2023",
+    "issuedate": "13-01-2023",
+    "regno": "211090033"
+  },
+  {
+    "name": "Mastering Bitcoin",
+    "author": "Andreas ANtonopoulos",
+    "status": "issued",
+    "issuer": "Dhrumil Raigagla",
+    "duedate":"04-01-2023",
+    "issuedate": "29-12-2022",
+    "regno": "201080012"
+  },
+  {
+    "name": "Cryptography and Network Security",
+    "author": "William Stallings",
+    "status": "available",
+    "issuer": "NA",
+    "duedate":"NA",
+    "issuedate": "NA",
+    "regno": "NA"
+  },
+  {
+    "name": "Information Technology Project Management",
+    "author": "Kathy Schwalbe",
+    "status": "issued",
+    "issuer": "Soham Sangole",
+    "duedate":"28-01-2023",
+    "issuedate": "11-01-2023",
+    "regno": "211080050"
+  },
+  {
+    "name": "Mastering Data Mining",
+    "author": "M Berry",
+    "status": "issued",
+    "issuer": "Raghav Agarwal",
+    "duedate":"23-01-2023",
+    "issuedate": "14-01-2023",
+    "regno": "211080068"
+  },
+  {
+    "name": "Fundamentals of Digital Image Processing",
+    "author": "K Jain",
+    "status": "issued",
+    "issuer": "Sahil Dhillon",
+    "duedate":"16-01-2023",
+    "issuedate": "14-01-2023",
+    "regno": "211090024"
+  },
+  {
+    "name": "Engineering Mathematics 1",
+    "author": "GV Kumbhojkar",
+    "status": "issued",
+    "issuer": "Nidhi Shah",
+    "duedate":"14-01-2023",
+    "issuedate": "07-01-2023",
+    "regno": "211081067"
+  },
+  {
+    "name": "Elements of Mechanical Engineering",
+    "author": "Dhomkundwar",
+    "status": "issued",
+    "issuer": "Raunak Singh Kalsi",
+    "duedate":"14-01-2023",
+    "issuedate": "09-01-2023",
+    "regno": "211090024"
+  },
+  {
+    "name": "Basics of Electrical Engineering",
+    "author": "Ravish Singh",
+    "status": "issued",
+    "issuer": "Dhruv Sapra",
+    "duedate":"14-01-2023",
+    "issuedate": "10-01-2023",
+    "regno": "211090024"
+  }
+]
