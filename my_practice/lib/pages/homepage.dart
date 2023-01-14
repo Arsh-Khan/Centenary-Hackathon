@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_practice/database/display.dart';
+import 'package:my_practice/utils/routes.dart';
 
 import '../utils/routes.dart';
 
@@ -123,7 +125,8 @@ class _dashBoardState extends State<dashBoard> {
                   child: InkWell(
                     splashColor: Colors.transparent,
                     onTap: () {
-                      //
+                      Navigator.of(context).pushNamedAndRemoveUntil(
+                          MyRoutes.displayDatabase, (route) => false);
                     },
                     child: Center(
                       child: Column(

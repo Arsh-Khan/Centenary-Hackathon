@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_practice/database/display.dart';
 import 'package:my_practice/pages/contact.dart';
 import 'package:my_practice/pages/forgot_password.dart';
 import 'package:my_practice/pages/homepage.dart';
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.contact_us: (context) => contact(),
         MyRoutes.my_profile: (context) => ProfilePage(),
         MyRoutes.verifyEmailRoute: (context) => VerifyEmailView(),
+        MyRoutes.displayDatabase: (context) => MongoDbDisplay(),
       },
     );
   }
