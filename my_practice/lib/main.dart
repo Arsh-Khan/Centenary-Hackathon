@@ -9,6 +9,7 @@ import 'package:my_practice/pages/registration.dart';
 import 'package:my_practice/pages/self_check_in.dart';
 import 'package:my_practice/pages/self_check_out.dart';
 import 'package:my_practice/pages/stash.dart';
+import 'package:my_practice/pages/verify_email_view.dart';
 import 'package:my_practice/utils/routes.dart';
 
 void main() {
@@ -46,7 +47,8 @@ class MyApp extends StatelessWidget {
         MyRoutes.qr_scanner_in: (context) => My_customized_widget_in(),
         MyRoutes.qr_scanner_out: (context) => My_customized_widget_out(),
         MyRoutes.contact_us: (context) => contact(),
-        MyRoutes.my_profile: (context) => ProfilePage()
+        MyRoutes.my_profile: (context) => ProfilePage(),
+        MyRoutes.verifyEmailRoute: (context) => VerifyEmailView(),
       },
     );
   }

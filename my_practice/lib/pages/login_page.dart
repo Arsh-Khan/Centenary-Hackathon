@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_practice/services/auth/auth_exceptions.dart';
+import 'package:my_practice/services/auth/auth_service.dart';
+import 'package:my_practice/utils/check_vjti_email.dart';
+import 'package:my_practice/utils/show_error_dialog.dart';
 import '../utils/routes.dart';
 
 class LoginPage extends StatefulWidget {
@@ -12,6 +16,23 @@ class _LoginPageState extends State<LoginPage> {
   String name = "";
   bool changebutton = false;
   final _formkey = GlobalKey<FormState>();
+
+  late final TextEditingController _email;
+  late final TextEditingController _password;
+
+  @override
+  void initState() {
+    _email = TextEditingController();
+    _password = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _email.dispose();
+    _password.dispose();
+    super.dispose();
+  }
 
   moveToHome(BuildContext context) async {
     if (_formkey.currentState!.validate()) {
@@ -66,6 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     children: [
                       TextFormField(
+                        controller: _email,
                         decoration: InputDecoration(
                           hintText: "Enter Username",
                           labelText: "Username",
@@ -82,6 +104,7 @@ class _LoginPageState extends State<LoginPage> {
                         }),
                       ),
                       TextFormField(
+                          controller: _password,
                           obscureText: true,
                           decoration: InputDecoration(
                             hintText: "Enter Password",
@@ -125,7 +148,52 @@ class _LoginPageState extends State<LoginPage> {
                   borderRadius: BorderRadius.circular(changebutton ? 50 : 25),
                   child: InkWell(
                     splashColor: Colors.black,
-                    onTap: () => moveToHome(context),
+                    onTap: () async {
+                      final email = _email.text;
+                      final password = _password.text;
+                      try {
+                        // if (email.isEmpty || password.isEmpty) {
+                        //   showErrorDiaglog(context,
+                        //       'Email or Password field cannot be empty');
+                        // }
+                        final isVJTIEmailID = emailCheck(email);
+
+                        // devtools.log(isVJTIEmailID.toString());
+                        // devtools.log('$email + $password');
+                        if (isVJTIEmailID) {
+                          await AuthService.firebase()
+                              .logIn(email: email, password: password);
+                          final user = AuthService.firebase().currentUser;
+                          if (user?.isEmailVerified ?? false) {
+                            // devtools.log(userCredential.toString());
+                            Navigator.of(context).pushNamedAndRemoveUntil(
+                                MyRoutes.homeRoute, (route) => false);
+                          } else {
+                            await AuthService.firebase()
+                                .sendEmailVerification();
+                            Navigator.of(context).pushNamedAndRemoveUntil(
+                                MyRoutes.verifyEmailRoute, (route) => false);
+                          }
+                        } else {
+                          showErrorDiaglog(context, 'Enter a Valid VJTI ID');
+                        }
+                      } on UserNotFoundAuthException {
+                        await showErrorDiaglog(
+                          context,
+                          'User not Found',
+                        );
+                      } on WrongPasswordAuthException {
+                        await showErrorDiaglog(
+                          context,
+                          'Wrong Credentials',
+                        );
+                      } on GenericAuthExceptions {
+                        await showErrorDiaglog(
+                          context,
+                          'Authentication Error',
+                        );
+                      }
+                    },
                     child: AnimatedContainer(
                       duration: Duration(seconds: 1),
                       width: changebutton ? 75 : 250,

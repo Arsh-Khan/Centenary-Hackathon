@@ -1,7 +1,11 @@
 // import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:my_practice/services/auth/auth_exceptions.dart';
+import 'package:my_practice/services/auth/auth_service.dart';
+import 'package:my_practice/utils/check_vjti_email.dart';
 import 'package:my_practice/utils/constants.dart';
+import 'package:my_practice/utils/show_error_dialog.dart';
 import '../utils/routes.dart';
 
 class Registration extends StatefulWidget {
@@ -118,9 +122,41 @@ class _RegistrationState extends State<Registration> {
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
-                    onPressed: () {
-                      name = _name.text;
-                      email = _email.text;
+                    onPressed: () async {
+                      final email = _email.text;
+                      final password = _password.text;
+                      final name = _name.text;
+                      try {
+                        final isVJTIEmailID = emailCheck(email);
+                        if (isVJTIEmailID) {
+                          await AuthService.firebase()
+                              .createUser(email: email, password: password);
+                          final user = AuthService.firebase().currentUser;
+
+                          if (user?.isEmailVerified ?? false) {
+                            // devtools.log(userCredential.toString());
+                            Navigator.of(context).pushNamedAndRemoveUntil(
+                                MyRoutes.stashRoute, (route) => false);
+                          } else {
+                            await AuthService.firebase()
+                                .sendEmailVerification();
+                            Navigator.of(context).pushNamedAndRemoveUntil(
+                                MyRoutes.verifyEmailRoute, (route) => false);
+                          }
+                        } else {
+                          showErrorDiaglog(context, 'Enter a Valid VJTI ID');
+                        }
+                      } on WeakPasswordAuthException {
+                        await showErrorDiaglog(context, 'Weak Password');
+                      } on EmailAlreadyInUseAuthException {
+                        await showErrorDiaglog(
+                            context, 'Email is already in use');
+                      } on InvalidEmailAuthException {
+                        await showErrorDiaglog(
+                            context, 'This is an invalid email address');
+                      } on GenericAuthExceptions {
+                        await showErrorDiaglog(context, 'Failed to register');
+                      }
                     },
                     style: ElevatedButton.styleFrom(
                         primary: Color.fromARGB(255, 248, 165, 40),
